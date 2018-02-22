@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>RedsysTPV.NetStandard</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
