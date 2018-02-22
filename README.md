@@ -2,7 +2,7 @@
 
 ## SHA256 signature implementation
 
-This is a .NET Standard library based on RedsysTPV by mbuenoferrer for help you on cart and orders integrations with the Redsys payment gateway (a platform that manage online payments for several spanish banks like La Caixa, Banco Santander, BBVA, Banco Sabadell, Bankia, etc). now it can be used on .NET Core or any other that implements netstandard 2.0.
+This is a .NET Standard library based on RedsysTPV by mbuenoferrer for help you on cart and orders integrations with the Redsys payment gateway (a platform that manage online payments for several spanish banks like La Caixa, Banco Santander, BBVA, Banco Sabadell, Bankia, etc). Now it can be used on .NET Core or any other that implements netstandard 2.0.
 
 This library is released because of the mandatory update from old SHA1 signatures to SHA256, in order to keep using the platform securely. The old SHA1 signatures will stop working on November 23th, when Redsys virtual POS will accept only signatures generated using SHA-256.
 
