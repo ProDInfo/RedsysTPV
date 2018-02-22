@@ -7,6 +7,7 @@ namespace RedsysTPV.Helpers
     {
         public static string Encrypt(string textKey, string content)
         {
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             byte[] key = Encoding.GetEncoding(1252).GetBytes(textKey);
             byte[] iv = new byte[8];
             byte[] data = Encoding.GetEncoding(1252).GetBytes(content);

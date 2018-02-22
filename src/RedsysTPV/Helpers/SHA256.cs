@@ -9,6 +9,7 @@ namespace RedsysTPV.Helpers
         public static string HashHMAC(string data, string key)
         {
             key = key ?? "";
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
             var encoding = Encoding.GetEncoding(1252);
             byte[] keyByte = encoding.GetBytes(key);
             byte[] messageBytes = encoding.GetBytes(data);
