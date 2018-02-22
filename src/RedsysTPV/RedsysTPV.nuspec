@@ -6,8 +6,8 @@
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <licenseUrl>https://github.com/mbuenoferrer/RedsysTPV/blob/master/LICENSE.txt</licenseUrl>
-    <projectUrl>https://github.com/mbuenoferrer/RedsysTPV</projectUrl>
+    <licenseUrl>https://github.com/CrahunGit/RedsysTPV/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/CrahunGit/RedsysTPV</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/mbuenoferrer/RedsysTPV/master/redsys.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>

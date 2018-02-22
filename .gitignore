@@ -3,3 +3,10 @@
 ################################################################################
 
 /src/RedsysTPV/bin
+/src/RedsysTPV/obj
+/src/RedsysTPV.Tests/bin
+/src/RedsysTPV.Tests/obj
+/src/RedsysTPV.WebSample/bin
+/src/RedsysTPV.WebSample/obj
+/src/.vs/RedsysTPV/v15
+/src/packages

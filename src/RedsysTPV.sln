@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedsysTPV", "RedsysTPV\RedsysTPV.csproj", "{98C91F9B-7F7A-44BA-B5DA-B6B1CE550F0C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedsysTPV.Tests", "RedsysTPV.Tests\RedsysTPV.Tests.csproj", "{2D3EC8F2-B35D-42CB-9EA3-19300E1BEE0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedsysTPV.WebSample", "RedsysTPV.WebSample\RedsysTPV.WebSample.csproj", "{EC89DF5D-B53F-471E-B563-CB655D9445E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedsysTPV", "RedsysTPV\RedsysTPV.csproj", "{9D64AF82-3F3A-470D-84F2-B9E464829C4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{98C91F9B-7F7A-44BA-B5DA-B6B1CE550F0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98C91F9B-7F7A-44BA-B5DA-B6B1CE550F0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98C91F9B-7F7A-44BA-B5DA-B6B1CE550F0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98C91F9B-7F7A-44BA-B5DA-B6B1CE550F0C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2D3EC8F2-B35D-42CB-9EA3-19300E1BEE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2D3EC8F2-B35D-42CB-9EA3-19300E1BEE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3EC8F2-B35D-42CB-9EA3-19300E1BEE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -27,8 +23,15 @@ Global
 		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A75BEFE0-F3B2-4981-90CE-3F02CE4E80C6}
 	EndGlobalSection
 EndGlobal
