@@ -14,7 +14,7 @@ You can find an example here: http://redsystpv.azurewebsites.net.
 
 ## How to install
 
-You can install RedsysTPV as a [nuget package](https://www.nuget.org/packages/RedsysTPV): 
+You can install RedsysTPV as a [nuget package](https://www.nuget.org/packages/RedsysTPV.NetStandard): 
 
 	PM> Install-Package RedsysTPV.NetStandard
 
