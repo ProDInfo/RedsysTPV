@@ -2,6 +2,7 @@
 {
     public class PaymentRequest
     {
+        public string Ds_Merchant_ConsumerLanguage { get; }
         public string Ds_Merchant_Amount { get; }
         public string Ds_Merchant_Order { get; }
         public string Ds_Merchant_MerchantCode { get; }
@@ -13,6 +14,7 @@
         public string Ds_Merchant_UrlKO { get; }
 
         public PaymentRequest(
+            string Ds_Merchant_ConsumerLanguage,
             string Ds_Merchant_MerchantCode,
             string Ds_Merchant_Terminal,
             string Ds_Merchant_TransactionType,
@@ -23,6 +25,7 @@
             string Ds_Merchant_UrlOK,
             string Ds_Merchant_UrlKO)
         {
+            this.Ds_Merchant_ConsumerLanguage = Ds_Merchant_ConsumerLanguage;
             this.Ds_Merchant_MerchantCode = Ds_Merchant_MerchantCode;
             this.Ds_Merchant_Terminal = Ds_Merchant_Terminal;
             this.Ds_Merchant_TransactionType = Ds_Merchant_TransactionType;

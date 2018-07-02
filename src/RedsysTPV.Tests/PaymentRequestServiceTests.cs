@@ -11,6 +11,7 @@ namespace RedsysTPV.Tests
         {
             string merchantKey = "Mk9m98IfEblmPfrpsawt7BmxObt98Jev";
             PaymentRequest paymentRequest = new PaymentRequest(
+                "",
                 "999008881",
                 "871",
                 "0",
@@ -25,8 +26,8 @@ namespace RedsysTPV.Tests
             var result = paymentRequestService.GetPaymentRequestFormData(paymentRequest, merchantKey);
 
             Assert.IsTrue(result.Ds_SignatureVersion == "HMAC_SHA256_V1");
-            Assert.IsTrue(result.Ds_MerchantParameters == "eyJEc19NZXJjaGFudF9BbW91bnQiOiIxNDUiLCJEc19NZXJjaGFudF9PcmRlciI6IjE5OTkwMDAwMDAwQSIsIkRzX01lcmNoYW50X01lcmNoYW50Q29kZSI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X0N1cnJlbmN5IjoiOTc4IiwiRHNfTWVyY2hhbnRfVHJhbnNhY3Rpb25UeXBlIjoiMCIsIkRzX01lcmNoYW50X1Rlcm1pbmFsIjoiODcxIiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRVUkwiOiIiLCJEc19NZXJjaGFudF9VcmxPSyI6IiIsIkRzX01lcmNoYW50X1VybEtPIjoiIn0=");
-            Assert.IsTrue(result.Ds_Signature == "MAlGASPeuqCw4K4ZMNIR343ljOoEAmH7B5woby1kcbs=");
+            Assert.IsTrue(result.Ds_MerchantParameters == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMTQ1IiwiRHNfTWVyY2hhbnRfT3JkZXIiOiIxOTk5MDAwMDAwMEEiLCJEc19NZXJjaGFudF9NZXJjaGFudENvZGUiOiI5OTkwMDg4ODEiLCJEc19NZXJjaGFudF9DdXJyZW5jeSI6Ijk3OCIsIkRzX01lcmNoYW50X1RyYW5zYWN0aW9uVHlwZSI6IjAiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijg3MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiJ9");
+            Assert.IsTrue(result.Ds_Signature == "w8ddr3qPbnvQfn+bSfq1eEHYnLGtUuGHQZxOhSq25Qc=");
         }
 
     }
