@@ -1,5 +1,6 @@
 ﻿using RedsysTPV.Models;
 using System.Configuration;
+using System.Security.Policy;
 using System.Web.Mvc;
 
 namespace RedsysTPV.WebSample.Controllers
@@ -12,7 +13,7 @@ namespace RedsysTPV.WebSample.Controllers
             var paymentRequestService = new PaymentRequestService();
 
             var paymentRequest = new PaymentRequest(
-                Ds_Merchant_ConsumerLanguage: "es",
+                Ds_Merchant_ConsumerLanguage: Language.Spanish,
                 Ds_Merchant_MerchantCode: merchantCode,
                 Ds_Merchant_Terminal: "1",
                 Ds_Merchant_TransactionType: "0",

@@ -14,7 +14,6 @@
         public string Ds_Merchant_UrlKO { get; }
 
         public PaymentRequest(
-            string Ds_Merchant_ConsumerLanguage,
             string Ds_Merchant_MerchantCode,
             string Ds_Merchant_Terminal,
             string Ds_Merchant_TransactionType,
@@ -23,9 +22,9 @@
             string Ds_Merchant_Order,
             string Ds_Merchant_MerchantURL,
             string Ds_Merchant_UrlOK,
-            string Ds_Merchant_UrlKO)
+            string Ds_Merchant_UrlKO,
+            Language Ds_Merchant_ConsumerLanguage = Language.Spanish)
         {
-            this.Ds_Merchant_ConsumerLanguage = Ds_Merchant_ConsumerLanguage;
             this.Ds_Merchant_MerchantCode = Ds_Merchant_MerchantCode;
             this.Ds_Merchant_Terminal = Ds_Merchant_Terminal;
             this.Ds_Merchant_TransactionType = Ds_Merchant_TransactionType;
@@ -35,6 +34,7 @@
             this.Ds_Merchant_MerchantURL = Ds_Merchant_MerchantURL;
             this.Ds_Merchant_UrlOK = Ds_Merchant_UrlOK;
             this.Ds_Merchant_UrlKO = Ds_Merchant_UrlKO;
+            this.Ds_Merchant_ConsumerLanguage = $"{(int)Ds_Merchant_ConsumerLanguage:D3}";
         }
     }
 }

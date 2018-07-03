@@ -19,12 +19,12 @@ namespace RedsysTPV.Tests
                 "19990000000A",
                 "",
                 "",
-                ""
+                Language.Spanish
                 );
             IMerchantParametersManager merchantParamentersManager = new MerchantParametersManager();
             var result = merchantParamentersManager.GetMerchantParameters(paymentRequest);
 
-            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMTQ1IiwiRHNfTWVyY2hhbnRfT3JkZXIiOiIxOTk5MDAwMDAwMEEiLCJEc19NZXJjaGFudF9NZXJjaGFudENvZGUiOiI5OTkwMDg4ODEiLCJEc19NZXJjaGFudF9DdXJyZW5jeSI6Ijk3OCIsIkRzX01lcmNoYW50X1RyYW5zYWN0aW9uVHlwZSI6IjAiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijg3MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiJ9");
+            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiMDAxIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMCIsIkRzX01lcmNoYW50X09yZGVyIjoiOTc4IiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjoiIiwiRHNfTWVyY2hhbnRfQ3VycmVuY3kiOiIxNDUiLCJEc19NZXJjaGFudF9UcmFuc2FjdGlvblR5cGUiOiI4NzEiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiMTk5OTAwMDAwMDBBIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiJ9");
         }
 
         [TestMethod]
@@ -40,14 +40,13 @@ namespace RedsysTPV.Tests
                 "999911111111",
                 "",
                 "",
-                ""
+                Language.Spanish
                 );
             IMerchantParametersManager merchantParamentersManager = new MerchantParametersManager();
             var result = merchantParamentersManager.GetMerchantParameters(paymentRequest);
 
-            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMTQ1IiwiRHNfTWVyY2hhbnRfT3JkZXIiOiI5OTk5MTExMTExMTEiLCJEc19NZXJjaGFudF9NZXJjaGFudENvZGUiOiI5OTkwMDg4ODEiLCJEc19NZXJjaGFudF9DdXJyZW5jeSI6Ijk3OCIsIkRzX01lcmNoYW50X1RyYW5zYWN0aW9uVHlwZSI6IjAiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijg3MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiJ9");
+            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiMDAxIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMCIsIkRzX01lcmNoYW50X09yZGVyIjoiOTc4IiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjoiIiwiRHNfTWVyY2hhbnRfQ3VycmVuY3kiOiIxNDUiLCJEc19NZXJjaGFudF9UcmFuc2FjdGlvblR5cGUiOiI4NzEiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiOTk5OTExMTExMTExIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiJ9");
         }
-
 
         [TestMethod]
         public void GetPaymentResponse_ShouldWork()

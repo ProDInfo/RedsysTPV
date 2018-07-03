@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>RedsysTPV.NetStandard</AssemblyName>
-    <Version>1.0.3</Version>
+    <Version>1.0.4</Version>
     <PackageProjectUrl>https://github.com/CrahunGit/RedsysTPV</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/CrahunGit/RedsysTPV/master/redsys.png</PackageIconUrl>
     <PackageLicenseUrl>https://raw.githubusercontent.com/CrahunGit/RedsysTPV/master/LICENSE.txt</PackageLicenseUrl>
