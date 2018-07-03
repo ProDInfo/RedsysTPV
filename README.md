@@ -35,6 +35,7 @@ var paymentRequestService = new PaymentRequestService();
 
 var paymentRequest = 
 	new PaymentRequest(
+		Ds_Merchant_ConsumerLanguage: Language.Spanish,
 		Ds_Merchant_MerchantCode: "012345678",	
 		Ds_Merchant_Terminal: "1",	
 		Ds_Merchant_TransactionType: "0",
