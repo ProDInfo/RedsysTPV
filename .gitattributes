@@ -15,3 +15,6 @@
 *.PDF	 diff=astextplain
 *.rtf	 diff=astextplain
 *.RTF	 diff=astextplain
+
+src/RedsysTPV.WebSample/Content/* linguist-vendored
+src/RedsysTPV.WebSample/Scripts/* linguist-vendored
