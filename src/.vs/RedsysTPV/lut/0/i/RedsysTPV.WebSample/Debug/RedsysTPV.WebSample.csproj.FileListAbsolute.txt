@@ -1,7 +1,0 @@
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\b\RedsysTPV.WebSample\bin\RedsysTPV.WebSample.dll.config
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\b\RedsysTPV.WebSample\bin\RedsysTPV.WebSample.dll
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\b\RedsysTPV.WebSample\bin\RedsysTPV.WebSample.pdb
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\i\RedsysTPV.WebSample\Debug\RedsysTPV.WebSample.csprojResolveAssemblyReference.cache
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\i\RedsysTPV.WebSample\Debug\RedsysTPV.WebSample.csproj.CoreCompileInputs.cache
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\i\RedsysTPV.WebSample\Debug\RedsysTPV.WebSample.dll
-C:\Users\Crahun\Source\Repos\RedsysTPV2\src\.vs\RedsysTPV\lut\0\i\RedsysTPV.WebSample\Debug\RedsysTPV.WebSample.pdb
