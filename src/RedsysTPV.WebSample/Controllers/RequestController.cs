@@ -1,4 +1,5 @@
-﻿using RedsysTPV.Models;
+﻿using RedsysTPV.Enums;
+using RedsysTPV.Models;
 using System.Configuration;
 using System.Security.Policy;
 using System.Web.Mvc;
@@ -24,7 +25,7 @@ namespace RedsysTPV.WebSample.Controllers
                 Ds_Merchant_UrlOK: Url.Action("OK", "Result", null, Request.Url.Scheme),
                 Ds_Merchant_UrlKO: Url.Action("KO", "Result", null, Request.Url.Scheme));
 
-            paymentRequest.Ds_Merchant_PayMethod = Enums.PaymentMethod.CreditCard;
+            paymentRequest.Ds_Merchant_PayMethod = PaymentMethod.CreditCard;
 
             var formData = paymentRequestService.GetPaymentRequestFormData(
                 paymentRequest: paymentRequest,
