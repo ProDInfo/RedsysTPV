@@ -47,7 +47,7 @@ var paymentRequest =
 		Ds_Merchant_UrlKO: "http://www.example.com/payment-ko");
 
 //Case you need to set the redsys payment methods
-paymentRequest.Ds_Merchant_PayMethod = Enums.PaymentMethod.CreditCard;
+paymentRequest.Ds_Merchant_PayMethod = PaymentMethod.CreditCard;
  
 var formData = 
 	paymentRequestService.GetPaymentRequestFormData(
