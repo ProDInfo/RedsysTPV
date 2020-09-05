@@ -1,4 +1,8 @@
-﻿namespace RedsysTPV.Models
+﻿using Newtonsoft.Json;
+using RedsysTPV.Enums;
+using System;
+
+namespace RedsysTPV.Models
 {
     public class PaymentRequest
     {
@@ -12,6 +16,9 @@
         public string Ds_Merchant_MerchantURL { get; }
         public string Ds_Merchant_UrlOK { get; }
         public string Ds_Merchant_UrlKO { get; }
+        
+        [JsonConverter(typeof(EnumDescriptionConverter))]
+        public PaymentMethod Ds_Merchant_PayMethod { get; set; }
 
         public PaymentRequest(
             string Ds_Merchant_MerchantCode,

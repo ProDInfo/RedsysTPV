@@ -24,6 +24,8 @@ namespace RedsysTPV.WebSample.Controllers
                 Ds_Merchant_UrlOK: Url.Action("OK", "Result", null, Request.Url.Scheme),
                 Ds_Merchant_UrlKO: Url.Action("KO", "Result", null, Request.Url.Scheme));
 
+            paymentRequest.Ds_Merchant_PayMethod = Enums.PaymentMethod.CreditCard;
+
             var formData = paymentRequestService.GetPaymentRequestFormData(
                 paymentRequest: paymentRequest,
                 merchantKey: ConfigurationManager.AppSettings["MerchantKey"]);
