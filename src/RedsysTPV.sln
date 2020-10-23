@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.BlazorWebAssembly
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.BlazorWebAssemblySample.Client", "RedsysTPV.BlazorWebAssemblySample\Client\RedsysTPV.BlazorWebAssemblySample.Client.csproj", "{4ADFD6B9-A55F-4F6E-935A-0F37A9A04BE9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.BlazorWebAssemblySample.Shared", "RedsysTPV.BlazorWebAssemblySample.Shared\RedsysTPV.BlazorWebAssemblySample.Shared.csproj", "{78918B71-AAB5-4C60-A8D5-4C86613E7850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.BlazorWebAssemblySample.Shared", "RedsysTPV.BlazorWebAssemblySample\Shared\RedsysTPV.BlazorWebAssemblySample.Shared.csproj", "{78918B71-AAB5-4C60-A8D5-4C86613E7850}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
