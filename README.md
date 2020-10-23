@@ -1,4 +1,6 @@
 ﻿# RedsysTPV 
+ 
+### *Note: It fully supprts Blazor webassembly and a sample application is provided in the repository.*
 
 ## SHA256 signature implementation
 
