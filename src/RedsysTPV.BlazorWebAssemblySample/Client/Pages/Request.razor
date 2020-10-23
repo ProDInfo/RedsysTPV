@@ -1,0 +1,35 @@
+﻿@page "/request"
+
+@using RedsysTPV.BlazorWebAssemblySample.Shared.Models
+
+@inherits LayoutComponentBase
+@inject HttpClient client
+@inject IJSRuntime jsInterop
+
+<div class="row">
+    <div class="col-md-12">
+        <span>Pagando a través de redsys...</span>
+        <form name="frm" action="@request?.ConnectionUrl" method="POST">
+            <input type="hidden" name="Ds_SignatureVersion" value="@request?.Request?.Ds_SignatureVersion" />
+            <input type="hidden" name="Ds_MerchantParameters" value="@request?.Request?.Ds_MerchantParameters" />
+            <input type="hidden" name="Ds_Signature" value="@request?.Request?.Ds_Signature" />
+            <input type="submit" value="Enviar" style="display: none;">
+        </form>
+    </div>
+</div>
+
+@code
+{
+    private RedsysRequest request;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender is true)
+        {
+            request = await client.GetFromJsonAsync<RedsysRequest>("redsys");
+            StateHasChanged();
+            await jsInterop.InvokeVoidAsync("submit");
+        }
+    }
+}
+

@@ -10,6 +10,8 @@
 /src/RedsysTPV.WebSample/obj
 /src/.vs/RedsysTPV/v15
 /src/packages
-/.vs
+.vs
 /src/.vs/RedsysTPV/config/applicationhost.config
 /src/.vs/RedsysTPV/v16
+/src/**/bin
+/src/**/obj

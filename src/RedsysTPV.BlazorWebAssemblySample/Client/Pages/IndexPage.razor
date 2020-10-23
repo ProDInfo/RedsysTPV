@@ -1,0 +1,11 @@
+﻿@page "/"
+@using RedsysTPV.BlazorWebAssemblySample.Shared.Models
+@inject HttpClient client;
+@inject NavigationManager navigationManager
+@inject IJSRuntime jsInterop
+
+<div class="row">
+    <div class="col-md-12">
+        <button class="btn btn-primary" @onclick="@(() => navigationManager.NavigateTo("/request"))">Pagar con redsys</button>
+    </div>
+</div>
