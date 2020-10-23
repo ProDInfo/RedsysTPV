@@ -4,8 +4,15 @@
 @inject NavigationManager navigationManager
 @inject IJSRuntime jsInterop
 
-<div class="row">
-    <div class="col-md-12">
-        <button class="btn btn-primary" @onclick="@(() => navigationManager.NavigateTo("/request"))">Pagar con redsys</button>
+<form class="form-inline">
+    <div class="form-group mb-2">
+        <label for="staticEmail2" class="sr-only">Número pedido</label>
+        <input type="text" class="form-control" id="staticEmail2" value="@orderNumber">
     </div>
-</div>
+
+    <button class="btn btn-primary mb-2" @onclick="@(() => navigationManager.NavigateTo($"/request/{orderNumber}"))">Pagar con redsys</button>
+</form>
+
+@code{
+    private string orderNumber = DateTime.Now.ToString("ddMMyyyyssff");
+}

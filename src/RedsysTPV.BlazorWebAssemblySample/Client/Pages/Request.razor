@@ -1,7 +1,8 @@
-﻿@page "/request"
+﻿@page "/request/{orderNumber}"
 
 @using RedsysTPV.BlazorWebAssemblySample.Shared.Models
 
+@inject NavigationManager NavManager
 @inherits LayoutComponentBase
 @inject HttpClient client
 @inject IJSRuntime jsInterop
@@ -22,13 +23,17 @@
 {
     private RedsysRequest request;
 
+    [Parameter]
+    public string OrderNumber { get; set; }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender is true)
         {
-            request = await client.GetFromJsonAsync<RedsysRequest>("redsys");
+            request = await client.GetFromJsonAsync<RedsysRequest>($"redsys/{OrderNumber}");
             StateHasChanged();
             await jsInterop.InvokeVoidAsync("submit");
+
         }
     }
 }

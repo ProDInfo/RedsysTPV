@@ -17,8 +17,8 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server.Controllers
             this.logger = logger;
         }
 
-        [HttpGet]
-        public ActionResult<RedsysRequest> Get([FromServices] Secret secret)
+        [HttpGet("{orderNumber}")]
+        public ActionResult<RedsysRequest> Get(string orderNumber, [FromServices] Secret secret)
         {
             PaymentRequestService paymentRequestService = new PaymentRequestService();
 
@@ -29,7 +29,7 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server.Controllers
                 Ds_Merchant_TransactionType: "0",
                 Ds_Merchant_Amount: "123",
                 Ds_Merchant_Currency: "978",
-                Ds_Merchant_Order: "3421TEST2371",
+                Ds_Merchant_Order: orderNumber,
                 Ds_Merchant_MerchantURL: Url.Action("Index", "Response", null, Request.Scheme),
                 Ds_Merchant_UrlOK: $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/Ok",
                 Ds_Merchant_UrlKO: $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/Ko")

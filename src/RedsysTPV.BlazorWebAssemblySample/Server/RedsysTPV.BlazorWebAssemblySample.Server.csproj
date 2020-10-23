@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\RedsysTPV\RedsysTPV.csproj" />
     <ProjectReference Include="..\Client\RedsysTPV.BlazorWebAssemblySample.Client.csproj" />
+    <ProjectReference Include="..\Shared\RedsysTPV.BlazorWebAssemblySample.Shared.csproj" />
   </ItemGroup>
 
 
