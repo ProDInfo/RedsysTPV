@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.ResponseCompression;
@@ -7,7 +8,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using RedsysTPV.BlazorWebAssemblySample.Shared.Models;
+using System;
 using System.Linq;
+using System.Net.Http;
 
 namespace RedsysTPV.BlazorWebAssemblySample.Server
 {
@@ -28,6 +31,15 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server
             services.AddSingleton(c => c.GetService<IOptions<Secret>>().Value);
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddScoped<HttpClient>(s =>
+            {
+                var navigationManager = s.GetRequiredService<NavigationManager>();
+                return new HttpClient
+                {
+                    BaseAddress = new Uri(navigationManager.BaseUri)
+                };
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,7 +67,7 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server
             {
                 endpoints.MapRazorPages();
                 endpoints.MapControllers();
-                endpoints.MapFallbackToFile("index.html");
+                endpoints.MapFallbackToPage("/_Host");
             });
         }
     }
