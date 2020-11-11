@@ -15,5 +15,9 @@
     <ProjectReference Include="..\Shared\RedsysTPV.BlazorWebAssemblySample.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\ServiceDependencies\" />
+  </ItemGroup>
+
 
 </Project>
