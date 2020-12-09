@@ -10,14 +10,14 @@ namespace RedsysTPV.Enums
         [Description("C")]
         CreditCard,
 
-        [Description("A")]
+        [Description("p")]
+        Paypal,
+
+        [Description("R")]
         Transfer,
 
-        [Description("D")]
-        Domiciliation,
-
-        [Description("T")]
-        CreditCardAndIUPay,
+        [Description("N")]
+        Masterpass,
 
         [Description("z")]
         Bizum,
