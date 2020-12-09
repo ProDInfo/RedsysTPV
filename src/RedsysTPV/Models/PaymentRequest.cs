@@ -18,7 +18,7 @@ namespace RedsysTPV.Models
         public string Ds_Merchant_UrlKO { get; }
         
         [JsonConverter(typeof(EnumDescriptionConverter))]
-        public PaymentMethod Ds_Merchant_PayMethod { get; set; }
+        public PaymentMethod Ds_Merchant_Paymethods { get; set; }
 
         public PaymentRequest(
             string Ds_Merchant_MerchantCode,

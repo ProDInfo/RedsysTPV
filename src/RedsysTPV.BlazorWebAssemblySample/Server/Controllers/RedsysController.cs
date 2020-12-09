@@ -34,7 +34,7 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server.Controllers
                 Ds_Merchant_UrlOK: $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/Ok",
                 Ds_Merchant_UrlKO: $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/Ko")
             {
-                Ds_Merchant_PayMethod = PaymentMethod.CreditCard
+                Ds_Merchant_Paymethods = PaymentMethod.Bizum
             };
 
             PaymentFormData formData = paymentRequestService.GetPaymentRequestFormData(
