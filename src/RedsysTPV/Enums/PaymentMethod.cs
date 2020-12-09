@@ -18,5 +18,8 @@ namespace RedsysTPV.Enums
 
         [Description("T")]
         CreditCardAndIUPay,
+
+        [Description("z")]
+        Bizum,
     }
 }
