@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json;
-using RedsysTPV.Enums;
+﻿using RedsysTPV.Enums;
 using System;
+using System.Text.Json.Serialization;
 
 namespace RedsysTPV.Models
 {
@@ -17,7 +17,7 @@ namespace RedsysTPV.Models
         public string Ds_Merchant_UrlOK { get; }
         public string Ds_Merchant_UrlKO { get; }
         
-        [JsonConverter(typeof(EnumDescriptionConverter))]
+        [JsonConverter(typeof(EnumDescriptionConverter<PaymentMethod>))]
         public PaymentMethod Ds_Merchant_Paymethods { get; set; }
 
         public PaymentRequest(
