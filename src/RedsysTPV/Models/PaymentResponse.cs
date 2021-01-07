@@ -1,7 +1,8 @@
-﻿using Newtonsoft.Json;
-using RedsysTPV.Converters;
+﻿using RedsysTPV.Converters;
 using RedsysTPV.Enums;
 using System;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace RedsysTPV.Models
 {
@@ -9,16 +10,16 @@ namespace RedsysTPV.Models
     {
         public string Ds_Date { get; set; }
         public string Ds_Hour { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         [JsonConverter(typeof(CurrencyToStringJsonConverter))]
         public decimal Ds_Amount { get; set; }
-        [JsonConverter(typeof(IntToStringJsonConverter), "D3")]
+        [JsonConverter(typeof(EnumToThreeStringConverter<Currency>))]
         public Currency Ds_Currency { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_Order { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_MerchantCode { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_Terminal { get; set; }
         public string Ds_Response { get; set; }
         /// <summary>
@@ -26,11 +27,13 @@ namespace RedsysTPV.Models
         /// </summary>
         public string Ds_MerchantData { get; set; }
         public string Ds_SecurePayment { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
-        [JsonConverter(typeof(EnumDescriptionConverter))]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+        [JsonConverter(typeof(EnumDescriptionConverter<TransactionType>))]
         public TransactionType Ds_TransactionType { get; set; }
         public string Ds_Card_Country { get; set; }
         public string Ds_AuthorisationCode { get; set; }
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+        [JsonConverter(typeof(EnumDescriptionConverter<Language>))]
         public Language Ds_ConsumerLanguage { get; set; }
         public string Ds_Card_Type { get; set; }
         public string Ds_Card_Brand { get; set; }

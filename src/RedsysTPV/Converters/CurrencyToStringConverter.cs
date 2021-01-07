@@ -1,51 +1,25 @@
-﻿using Newtonsoft.Json;
-using RedsysTPV.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
+using System.Globalization;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace RedsysTPV.Converters
 {
-    public class CurrencyToStringJsonConverter : JsonConverter
+    public class CurrencyToStringJsonConverter : JsonConverter<decimal>
     {
-        public override bool CanConvert(Type objectType)
+        public override decimal Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            if (typeof(decimal) == objectType)
-                return true;
-            else
-                return false;
-        }
-
-        public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
-        {
-            Decimal dvalue = (Decimal)value;
-            int truncate = (int)Math.Truncate(dvalue);
-            int remainder = (int)Math.Truncate((dvalue - truncate) * 100);
-
-            Currency currency = (Currency)serializer.Context.Context;
-            int amount = 0;
-
-            if (currency == Currency.JPY)
-                amount = truncate;
-            else
-                amount = truncate * 100 + remainder;
-
-            writer.WriteValue(amount.ToString());
-        }
-
-        public override bool CanRead
-        {
-            get { return true; }
-        }
-
-        public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.Value == null)
+            var value = reader.GetString();
+            if (string.IsNullOrEmpty(value))
             {
-                return 0M;
+                return (decimal)0;
             }
+            return Convert.ToDecimal(reader.GetString());
+        }
 
-            return Convert.ToDecimal(reader.Value);
+        public override void Write(Utf8JsonWriter writer, decimal value, JsonSerializerOptions options)
+        {
+            writer.WriteStringValue(value.ToString(CultureInfo.InvariantCulture));
         }
     }
 }

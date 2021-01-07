@@ -1,8 +1,8 @@
-﻿using Newtonsoft.Json;
-using RedsysTPV.Converters;
+﻿using RedsysTPV.Converters;
 using RedsysTPV.Enums;
 using System;
 using System.ComponentModel;
+using System.Text.Json.Serialization;
 
 // https://pagosonline.redsys.es/parametros-entrada-salida.html
 namespace RedsysTPV.Models
@@ -12,7 +12,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Las 2 últimas posiciones hacen referencia a los decimales de la moneda, excepto para el YEN que no tiene decimales.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         [JsonConverter(typeof(CurrencyToStringJsonConverter))]
         public decimal Ds_Merchant_Amount { get; set; }
         /// <summary>
@@ -45,18 +45,18 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Los valores posibles se incluyen en la tabla de idiomas
         /// </summary>
-        [JsonConverter(typeof(IntToStringJsonConverter), "D3")]
+        [JsonConverter(typeof(EnumToThreeStringConverter<Language>))]
         public Language Ds_Merchant_ConsumerLanguage { get; set; }
         /// <summary>
         /// Se debe enviar el código numérico de la moneda según el ISO-4217, ver tabla de monedas.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
-        [JsonConverter(typeof(IntToStringJsonConverter), "D3")]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+        [JsonConverter(typeof(EnumToThreeStringConverter<Currency>))]
         public Currency Ds_Merchant_Currency { get; set; }
         /// <summary>
         /// Conditional. Código CVV2 de la tarjeta.
         /// </summary>
-        public int Ds_Merchant_Cvv2 { get; }
+        public string Ds_Merchant_Cvv2 { get; }
 
         /// <summary>
         /// Valores posibles:
@@ -65,7 +65,7 @@ namespace RedsysTPV.Models
         /// </summary>
         public string Ds_Merchant_DirectPayment { get; set; }
         public object Ds_Merchant_Emv3ds { get; }
-        public int Ds_Merchant_ExpiryDate { get; }
+        public string Ds_Merchant_ExpiryDate { get; }
 
         /// <summary>
         /// Identificador del código de grupo asociado a la referencia
@@ -83,7 +83,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Código FUC asignado al comercio.(Nº de comercio)
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_Merchant_MerchantCode { get; set; }
         /// <summary>
         /// Cadena de datos que no procesará el TPV-Virtual y se devolverán de la misma forma en la respuesta
@@ -103,7 +103,7 @@ namespace RedsysTPV.Models
         /// Del 65 = A al 90 = Z
         /// Del 97 = a al 122 = z
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_Merchant_Order { get; set; }
         /// <summary>
         /// Tarjeta. Su longitud depende del tipo de tarjeta.
@@ -112,7 +112,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Forma de pago aplicable. Ver tabla DS_MERCHANT_PAYMETHODS
         /// </summary>
-        [JsonConverter(typeof(EnumDescriptionConverter))]
+        [JsonConverter(typeof(EnumDescriptionConverter<PaymentMethod>))]
         public PaymentMethod Ds_Merchant_Paymethods { get; set; }
 
         /// <summary>
@@ -126,14 +126,14 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Número de terminal que le asignará su banco.
         /// </summary>
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
         public string Ds_Merchant_Terminal { get; set; }
         /// <summary>
         /// Su longitud máxima es de 60 caracteres. Para la entrada de realizar pago esta información se mostrará al titular en la pantallas con las que este interaciona. En la pantalla de pago, el titular podrá modificar este valor.
         /// </summary>
         public string Ds_Merchant_Titular { get; set; }
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
-        [JsonConverter(typeof(EnumDescriptionConverter))]
+        [JsonIgnore(Condition = JsonIgnoreCondition.Never)]
+        [JsonConverter(typeof(EnumDescriptionConverter<TransactionType>))]
         public TransactionType Ds_Merchant_TransactionType { get; set; }
 
         /// <summary>
@@ -177,7 +177,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Para informar la dirección de mail del titular para enviar el enlace.
         /// </summary>
-        public string Ds_Merchant_Customer_Mail { get; }
+        public string Ds_Merchant_Customer_Mail { get; } 
 
         public string Ds_Merchant_P2f_ExpiryDate { get; }
         public string Ds_Merchant_Customer_Sms_Text { get; }
@@ -209,6 +209,12 @@ namespace RedsysTPV.Models
             this.Ds_Merchant_UrlOK = Ds_Merchant_UrlOK;
             this.Ds_Merchant_UrlKO = Ds_Merchant_UrlKO;
             this.Ds_Merchant_ConsumerLanguage = Ds_Merchant_ConsumerLanguage;
+        }
+
+        public PaymentRequest Clone()
+        {
+            PaymentRequest temp = (PaymentRequest)this.MemberwiseClone();
+            return temp;
         }
     }
 }
