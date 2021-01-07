@@ -1,0 +1,85 @@
+﻿Date: 30/12/2020 21:03:10
+Error: Object reference not set to an instance of an object.
+---
+Date: 01/01/2021 22:56:01
+Error: Object reference not set to an instance of an object.
+Date: 01/01/2021 22:56:26
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:56:44
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:56:51
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:56:56
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:57:16
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:57:18
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:57:30
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:57:51
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 22:58:28
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---
+Date: 01/01/2021 23:02:24
+IsValidSignature: True
+IsPaymentPerformed: True
+{"Ds_Date":"01/01/2021","Ds_Hour":"10:31","Ds_SecurePayment":"1","Ds_Card_Number":"454881******0004","Ds_ExpiryDate":"2012","Ds_Merchant_Identifier":"f2114e9832784f38a08faafea15b1656ad0c153b","Ds_Card_Country":"724","Ds_Amount":"0","Ds_Currency":"978","Ds_Order":"9999TEST0007","Ds_MerchantCode":"999008881","Ds_Terminal":"001","Ds_Response":"0000","Ds_MerchantData":"","Ds_TransactionType":"0","Ds_ConsumerLanguage":"2","Ds_AuthorisationCode":"165710","Ds_Card_Brand":"1","Ds_Merchant_Cof_Txnid":"2101011031490","Ds_ProcessedPayMethod":"5"}
+PaymentResponse.Ds_Response: 0000
+PaymentResponse.Ds_Order: 9999TEST0007
+PAGO REALIZADO CORRECTAMENTE
+---

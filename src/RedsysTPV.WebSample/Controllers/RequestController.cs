@@ -2,14 +2,22 @@
 using RedsysTPV.Models;
 using System.Configuration;
 using System.Security.Policy;
-using System.Web.Mvc;
+using Microsoft.AspNetCore.Mvc;
+using System;
+using Microsoft.Extensions.Configuration;
 
 namespace RedsysTPV.WebSample.Controllers
 {
     public class RequestController : Controller
     {
+        private IConfiguration _configuration;
+        public RequestController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         // GET: Request
-        public ActionResult Index(string merchantCode, string merchantOrder, string amount)
+        public ActionResult Index(string merchantCode, string merchantOrder, decimal amount)
         {
             var paymentRequestService = new PaymentRequestService();
 
@@ -17,21 +25,28 @@ namespace RedsysTPV.WebSample.Controllers
                 Ds_Merchant_ConsumerLanguage: Language.Spanish,
                 Ds_Merchant_MerchantCode: merchantCode,
                 Ds_Merchant_Terminal: "1",
-                Ds_Merchant_TransactionType: "0",
+                Ds_Merchant_TransactionType: TransactionType.Authorisation,
                 Ds_Merchant_Amount: amount,
-                Ds_Merchant_Currency: "978",
+                Ds_Merchant_Currency: Currency.EUR,
                 Ds_Merchant_Order: merchantOrder,
-                Ds_Merchant_MerchantURL: Url.Action("Index","Response", null, Request.Url.Scheme),
-                Ds_Merchant_UrlOK: Url.Action("OK", "Result", null, Request.Url.Scheme),
-                Ds_Merchant_UrlKO: Url.Action("KO", "Result", null, Request.Url.Scheme));
+                Ds_Merchant_MerchantURL: Url.Action("Index", "Response", null, Request.Scheme),
+                Ds_Merchant_UrlOK: Url.Action("OK", "Result", null, Request.Scheme),
+                Ds_Merchant_UrlKO: Url.Action("KO", "Result", null, Request.Scheme)
+                );
 
-            paymentRequest.Ds_Merchant_PayMethod = PaymentMethod.CreditCard;
+            paymentRequest.Ds_Merchant_Paymethods = PaymentMethod.CreditCard;
+            paymentRequest.Ds_Merchant_Titular = "TITULAR";
+            paymentRequest.Ds_Merchant_MerchantName = "MY COMMERCE";
+            paymentRequest.Ds_Merchant_ProductDescription = "PRODUCT DESCRIPTION";
+            paymentRequest.Ds_Merchant_Identifier = "REQUIRED";
+
+            var secrets = _configuration.GetSection("Secrets");
 
             var formData = paymentRequestService.GetPaymentRequestFormData(
                 paymentRequest: paymentRequest,
-                merchantKey: ConfigurationManager.AppSettings["MerchantKey"]);
+                merchantKey: secrets["key"]);
 
-            ViewBag.ConnectionURL = ConfigurationManager.AppSettings["TPVConnectionURL"];
+            ViewBag.ConnectionURL = secrets["url"];
             return View(formData);
         }
     }

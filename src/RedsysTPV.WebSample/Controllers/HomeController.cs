@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using RedsysTPV.WebSample.Models;
+using System.Diagnostics;
 
 namespace RedsysTPV.WebSample.Controllers
 {
@@ -11,9 +13,15 @@ namespace RedsysTPV.WebSample.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(string MerchantCode, string MerchantOrder, string Amount)
+        public ActionResult Index(string MerchantCode, string MerchantOrder, decimal Amount)
         {
             return RedirectToAction("Index", "Request", new { merchantCode = MerchantCode, merchantOrder = MerchantOrder, amount = Amount });
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
     }

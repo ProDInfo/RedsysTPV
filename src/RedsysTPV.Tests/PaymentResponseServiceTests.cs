@@ -20,12 +20,12 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.IsValidSignature == true);
             Assert.IsTrue(result.IsPaymentPerformed.DefaultIfEmpty(false).Single());
             Assert.IsNotNull(result.PaymentResponse);
-            Assert.IsTrue(result.PaymentResponse.Ds_Amount == "12345");
+            Assert.IsTrue(result.PaymentResponse.Ds_Amount == 123.45M);
             Assert.IsTrue(result.PaymentResponse.Ds_AuthorisationCode == "0");
             Assert.IsTrue(result.PaymentResponse.Ds_Card_Country == "");
             Assert.IsTrue(result.PaymentResponse.Ds_Card_Type == "D");
-            Assert.IsTrue(result.PaymentResponse.Ds_ConsumerLanguage == "0");
-            Assert.IsTrue(result.PaymentResponse.Ds_Currency == "978");
+            Assert.IsTrue(result.PaymentResponse.Ds_ConsumerLanguage == Language.Defect);
+            Assert.IsTrue(result.PaymentResponse.Ds_Currency == Currency.EUR);
             Assert.IsTrue(result.PaymentResponse.Ds_Date == "19/08/2015");
             Assert.IsTrue(result.PaymentResponse.Ds_Hour == "12:49");
             Assert.IsTrue(result.PaymentResponse.Ds_MerchantCode == "0123456");
@@ -34,7 +34,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.PaymentResponse.Ds_Response == "0");
             Assert.IsTrue(result.PaymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(result.PaymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == "0");
+            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
         }
 
         [TestMethod]
@@ -64,12 +64,12 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.IsValidSignature == true);
             Assert.IsFalse(result.IsPaymentPerformed.DefaultIfEmpty(false).Single());
             Assert.IsNotNull(result.PaymentResponse);
-            Assert.IsTrue(result.PaymentResponse.Ds_Amount == "12345");
+            Assert.IsTrue(result.PaymentResponse.Ds_Amount == 123.45M);
             Assert.IsTrue(result.PaymentResponse.Ds_AuthorisationCode == "0");
             Assert.IsTrue(result.PaymentResponse.Ds_Card_Country == "");
             Assert.IsTrue(result.PaymentResponse.Ds_Card_Type == "D");
-            Assert.IsTrue(result.PaymentResponse.Ds_ConsumerLanguage == "0");
-            Assert.IsTrue(result.PaymentResponse.Ds_Currency == "978");
+            Assert.IsTrue(result.PaymentResponse.Ds_ConsumerLanguage == Language.Defect);
+            Assert.IsTrue(result.PaymentResponse.Ds_Currency == Currency.EUR);
             Assert.IsTrue(result.PaymentResponse.Ds_Date == "19/08/2015");
             Assert.IsTrue(result.PaymentResponse.Ds_Hour == "12:49");
             Assert.IsTrue(result.PaymentResponse.Ds_MerchantCode == "0123456");
@@ -78,7 +78,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.PaymentResponse.Ds_Response == "101");
             Assert.IsTrue(result.PaymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(result.PaymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == "0");
+            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
         }
     }
 }
