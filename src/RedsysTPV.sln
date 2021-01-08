@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30615.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedsysTPV.WebSample", "RedsysTPV.WebSample\RedsysTPV.WebSample.csproj", "{EC89DF5D-B53F-471E-B563-CB655D9445E7}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV", "RedsysTPV\RedsysTPV.csproj", "{9D64AF82-3F3A-470D-84F2-B9E464829C4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{138D7B94-7C71-4589-A680-9661412F36A0}"
@@ -17,16 +15,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.BlazorWebAssembly
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.Tests", "RedsysTPV.Tests\RedsysTPV.Tests.csproj", "{47782D84-62FA-4AEC-810A-0FF541483A6F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RedsysTPV.WebSample", "RedsysTPV.WebSample\RedsysTPV.WebSample.csproj", "{32170B9D-AF67-4A44-AC3F-DEDA26A4176D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EC89DF5D-B53F-471E-B563-CB655D9445E7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D64AF82-3F3A-470D-84F2-B9E464829C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -47,15 +43,19 @@ Global
 		{47782D84-62FA-4AEC-810A-0FF541483A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47782D84-62FA-4AEC-810A-0FF541483A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47782D84-62FA-4AEC-810A-0FF541483A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32170B9D-AF67-4A44-AC3F-DEDA26A4176D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32170B9D-AF67-4A44-AC3F-DEDA26A4176D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32170B9D-AF67-4A44-AC3F-DEDA26A4176D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32170B9D-AF67-4A44-AC3F-DEDA26A4176D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{EC89DF5D-B53F-471E-B563-CB655D9445E7} = {138D7B94-7C71-4589-A680-9661412F36A0}
 		{4F2E134E-812B-4A37-9193-AF59BAD8965F} = {138D7B94-7C71-4589-A680-9661412F36A0}
 		{4ADFD6B9-A55F-4F6E-935A-0F37A9A04BE9} = {138D7B94-7C71-4589-A680-9661412F36A0}
 		{78918B71-AAB5-4C60-A8D5-4C86613E7850} = {138D7B94-7C71-4589-A680-9661412F36A0}
+		{32170B9D-AF67-4A44-AC3F-DEDA26A4176D} = {138D7B94-7C71-4589-A680-9661412F36A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A75BEFE0-F3B2-4981-90CE-3F02CE4E80C6}

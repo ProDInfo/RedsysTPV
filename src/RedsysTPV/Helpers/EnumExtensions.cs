@@ -1,5 +1,6 @@
 ﻿using RedsysTPV.Enums;
 using System.ComponentModel;
+using System.Globalization;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -29,7 +30,25 @@ namespace System
 
         public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
-            throw new NotImplementedException();
+            return (T)Enum.ToObject(typeof(T), Convert.ToInt32(reader.GetString()));
+        }
+    }
+
+    public class EnumToThreeStringConverter<T> : JsonConverter<T>
+    {
+        public override T Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            var value = reader.GetString();
+            if (string.IsNullOrEmpty(value))
+            {
+                return (T)Enum.ToObject(typeof(T), 0);
+            }
+            return (T)Enum.ToObject(typeof(T), Convert.ToInt32(reader.GetString()));
+        }
+
+        public override void Write(Utf8JsonWriter writer, T value, JsonSerializerOptions options)
+        {
+            writer.WriteStringValue(Convert.ToInt32(value).ToString("D3", CultureInfo.InvariantCulture));
         }
     }
 }

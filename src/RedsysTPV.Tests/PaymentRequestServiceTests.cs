@@ -11,13 +11,13 @@ namespace RedsysTPV.Tests
         {
             string merchantKey = "Mk9m98IfEblmPfrpsawt7BmxObt98Jev";
             PaymentRequest paymentRequest = new PaymentRequest(
-                "",
                 "999008881",
                 "871",
-                "0",
-                "145",
-                "978",
+                Enums.TransactionType.Authorisation,
+                1.45M,
+                Currency.EUR,
                 "19990000000A",
+                "",
                 "",
                 "",
                 Language.Spanish
@@ -26,8 +26,8 @@ namespace RedsysTPV.Tests
             var result = paymentRequestService.GetPaymentRequestFormData(paymentRequest, merchantKey);
 
             Assert.IsTrue(result.Ds_SignatureVersion == "HMAC_SHA256_V1");
-            Assert.IsTrue(result.Ds_MerchantParameters == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiMDAxIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMCIsIkRzX01lcmNoYW50X09yZGVyIjoiOTc4IiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjoiIiwiRHNfTWVyY2hhbnRfQ3VycmVuY3kiOiIxNDUiLCJEc19NZXJjaGFudF9UcmFuc2FjdGlvblR5cGUiOiI4NzEiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiMTk5OTAwMDAwMDBBIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiIsIkRzX01lcmNoYW50X1BheU1ldGhvZCI6IkMifQ==");
-            Assert.IsTrue(result.Ds_Signature == "n4wE9ctvMwysrh517aDTrhQiNlt0XSXyQPQpSpJmeN8=");
+            Assert.IsTrue(result.Ds_MerchantParameters == "ew0KICAiRHNfTWVyY2hhbnRfQW1vdW50IjogIjE0NSIsDQogICJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjogIjAwMSIsDQogICJEc19NZXJjaGFudF9DdXJyZW5jeSI6ICI5NzgiLA0KICAiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjogIjk5OTAwODg4MSIsDQogICJEc19NZXJjaGFudF9NZXJjaGFudFVSTCI6ICIiLA0KICAiRHNfTWVyY2hhbnRfT3JkZXIiOiAiMTk5OTAwMDAwMDBBIiwNCiAgIkRzX01lcmNoYW50X1BheW1ldGhvZHMiOiAiQyIsDQogICJEc19NZXJjaGFudF9UZXJtaW5hbCI6ICI4NzEiLA0KICAiRHNfTWVyY2hhbnRfVHJhbnNhY3Rpb25UeXBlIjogIjAiLA0KICAiRHNfTWVyY2hhbnRfVXJsT0siOiAiIiwNCiAgIkRzX01lcmNoYW50X1VybEtPIjogIiINCn0=");
+            Assert.IsTrue(result.Ds_Signature == "RIOJqg6hoE0SodvQqYSoGkHIa98Nkxep1xcRyBRhvSI=");
         }
 
     }

@@ -9,14 +9,14 @@ namespace RedsysTPV.Tests
         [TestMethod]
         public void GetMerchantParameters_ShouldWork()
         {
-            PaymentRequest paymentRequest = new PaymentRequest(
-                "",
+            PaymentRequest paymentRequest = new PaymentRequest(               
                 "999008881",
                 "871",
-                "0",
-                "145",
-                "978",
+                Enums.TransactionType.Authorisation,
+                1.45M,
+                Currency.EUR,
                 "19990000000A",
+                "",
                 "",
                 "",
                 Language.Spanish
@@ -24,20 +24,20 @@ namespace RedsysTPV.Tests
             IMerchantParametersManager merchantParamentersManager = new MerchantParametersManager();
             var result = merchantParamentersManager.GetMerchantParameters(paymentRequest);
 
-            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiMDAxIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMCIsIkRzX01lcmNoYW50X09yZGVyIjoiOTc4IiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjoiIiwiRHNfTWVyY2hhbnRfQ3VycmVuY3kiOiIxNDUiLCJEc19NZXJjaGFudF9UcmFuc2FjdGlvblR5cGUiOiI4NzEiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiMTk5OTAwMDAwMDBBIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiIsIkRzX01lcmNoYW50X1BheU1ldGhvZCI6IkMifQ==");
+            Assert.IsTrue(result== "ew0KICAiRHNfTWVyY2hhbnRfQW1vdW50IjogIjE0NSIsDQogICJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjogIjAwMSIsDQogICJEc19NZXJjaGFudF9DdXJyZW5jeSI6ICI5NzgiLA0KICAiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjogIjk5OTAwODg4MSIsDQogICJEc19NZXJjaGFudF9NZXJjaGFudFVSTCI6ICIiLA0KICAiRHNfTWVyY2hhbnRfT3JkZXIiOiAiMTk5OTAwMDAwMDBBIiwNCiAgIkRzX01lcmNoYW50X1BheW1ldGhvZHMiOiAiQyIsDQogICJEc19NZXJjaGFudF9UZXJtaW5hbCI6ICI4NzEiLA0KICAiRHNfTWVyY2hhbnRfVHJhbnNhY3Rpb25UeXBlIjogIjAiLA0KICAiRHNfTWVyY2hhbnRfVXJsT0siOiAiIiwNCiAgIkRzX01lcmNoYW50X1VybEtPIjogIiINCn0=");
         }
 
         [TestMethod]
         public void GetMerchantParameters_ShouldWork_2()
         {
             PaymentRequest paymentRequest = new PaymentRequest(
-                "",
                 "999008881",
                 "871",
-                "0",
-                "145",
-                "978",
+                Enums.TransactionType.Authorisation,
+                1.45M,
+                Currency.EUR,
                 "999911111111",
+                "",
                 "",
                 "",
                 Language.Spanish
@@ -45,7 +45,7 @@ namespace RedsysTPV.Tests
             IMerchantParametersManager merchantParamentersManager = new MerchantParametersManager();
             var result = merchantParamentersManager.GetMerchantParameters(paymentRequest);
 
-            Assert.IsTrue(result == "eyJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjoiMDAxIiwiRHNfTWVyY2hhbnRfQW1vdW50IjoiMCIsIkRzX01lcmNoYW50X09yZGVyIjoiOTc4IiwiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjoiIiwiRHNfTWVyY2hhbnRfQ3VycmVuY3kiOiIxNDUiLCJEc19NZXJjaGFudF9UcmFuc2FjdGlvblR5cGUiOiI4NzEiLCJEc19NZXJjaGFudF9UZXJtaW5hbCI6Ijk5OTAwODg4MSIsIkRzX01lcmNoYW50X01lcmNoYW50VVJMIjoiOTk5OTExMTExMTExIiwiRHNfTWVyY2hhbnRfVXJsT0siOiIiLCJEc19NZXJjaGFudF9VcmxLTyI6IiIsIkRzX01lcmNoYW50X1BheU1ldGhvZCI6IkMifQ==");
+            Assert.IsTrue(result == "ew0KICAiRHNfTWVyY2hhbnRfQW1vdW50IjogIjE0NSIsDQogICJEc19NZXJjaGFudF9Db25zdW1lckxhbmd1YWdlIjogIjAwMSIsDQogICJEc19NZXJjaGFudF9DdXJyZW5jeSI6ICI5NzgiLA0KICAiRHNfTWVyY2hhbnRfTWVyY2hhbnRDb2RlIjogIjk5OTAwODg4MSIsDQogICJEc19NZXJjaGFudF9NZXJjaGFudFVSTCI6ICIiLA0KICAiRHNfTWVyY2hhbnRfT3JkZXIiOiAiOTk5OTExMTExMTExIiwNCiAgIkRzX01lcmNoYW50X1BheW1ldGhvZHMiOiAiQyIsDQogICJEc19NZXJjaGFudF9UZXJtaW5hbCI6ICI4NzEiLA0KICAiRHNfTWVyY2hhbnRfVHJhbnNhY3Rpb25UeXBlIjogIjAiLA0KICAiRHNfTWVyY2hhbnRfVXJsT0siOiAiIiwNCiAgIkRzX01lcmNoYW50X1VybEtPIjogIiINCn0=");
         }
 
         [TestMethod]
@@ -56,12 +56,12 @@ namespace RedsysTPV.Tests
             var paymentResponse = merchantParamentersManager.GetPaymentResponse(merchantParamenters);
 
             Assert.IsNotNull(paymentResponse);
-            Assert.IsTrue(paymentResponse.Ds_Amount == "12345");
+            Assert.IsTrue(paymentResponse.Ds_Amount == 123.45M);
             Assert.IsTrue(paymentResponse.Ds_AuthorisationCode == "0");
             Assert.IsTrue(paymentResponse.Ds_Card_Country == "");
             Assert.IsTrue(paymentResponse.Ds_Card_Type == "D");
-            Assert.IsTrue(paymentResponse.Ds_ConsumerLanguage == "0");
-            Assert.IsTrue(paymentResponse.Ds_Currency == "978");
+            Assert.IsTrue(paymentResponse.Ds_ConsumerLanguage == Language.Defect);
+            Assert.IsTrue(paymentResponse.Ds_Currency == Currency.EUR);
             Assert.IsTrue(paymentResponse.Ds_Date == "19/08/2015");
             Assert.IsTrue(paymentResponse.Ds_Hour == "12:49");
             Assert.IsTrue(paymentResponse.Ds_MerchantCode == "0123456");
@@ -70,7 +70,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(paymentResponse.Ds_Response == "0");
             Assert.IsTrue(paymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(paymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(paymentResponse.Ds_TransactionType == "0");
+            Assert.IsTrue(paymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
         }
     }
 }

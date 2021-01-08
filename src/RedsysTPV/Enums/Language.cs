@@ -1,5 +1,6 @@
 ﻿public enum Language
 {
+    Defect = 0, // Spanish
     Spanish = 1,
     English = 2,
     Catalonian = 3,
@@ -12,5 +13,23 @@
     Valencian = 10,
     Polish = 11,
     Galician = 12,
-    Basque = 12
+    Basque = 13,
+    Bulgarian = 100,
+    Chinese = 156,
+    Croatian = 191,
+    Czech = 203,
+    Danes = 208,
+    Estonian = 233,
+    Finns = 246,
+    Greek = 300,
+    Hungarian = 348,
+    Japanese = 392,
+    Latvian = 428,
+    Lithuanian = 440,
+    Maltes = 470,
+    Romanian = 642,
+    Russian = 643,
+    Slovak = 703,
+    Slovenian = 705,
+    Turkish = 792
 };

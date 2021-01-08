@@ -1,4 +1,4 @@
-﻿@model RedsysTPV.Models.PaymentFormData
+﻿@model RequestViewModel
 @{
     ViewBag.Title = "Home Page";
 }
@@ -12,18 +12,17 @@
             @Html.AntiForgeryToken()
             <div class="form-group">
                 <label for="MerchantCode">Código de comercio</label>
-                <input type="text" class="form-control" name="MerchantCode" value="335088258">
+                @Html.TextBox(nameof(Model.MerchantCode), "999008881", new { @Class = "form-control" })
                 <p class="help-block">Código FUC asignado al comercio</p>
             </div>
             <div class="form-group">
                 <label for="MerchantOrder">Número de pedido (12 caracteres)</label>
-                <input type="text" class="form-control" name="MerchantOrder" value="9999TEST0001">
+                @Html.TextBox(nameof(Model.MerchantOrder), "9999TEST0008", new { @Class = "form-control" })
                 <p class="help-block">Los 4 primeros dígitos deben ser numéricos, para los dígitos restantes solo utilizar caracteres ASCII</p>
             </div>
             <div class="form-group">
-                <label for="Amount">Importe (sin separador de decimales)</label>
-                <input type="text" class="form-control" name="Amount" value="123">
-                <p class="help-block">Para Euros las dos últimas posiciones se consideran decimales</p>
+                <label for="Amount">Importe</label>
+                @Html.TextBox(nameof(Model.Amount), 1.23, new { @Class = "form-control" })
             </div>
 
             <input type="submit" class="btn btn-primary" value="Enviar">
