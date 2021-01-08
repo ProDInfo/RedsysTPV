@@ -2,6 +2,8 @@
  
 ### *Note: It fully supprts Blazor webassembly and a sample application is provided in the repository.*
 
+### ¡¡¡This project has been refactored by ProDInfo. Thanks for your support and your great research to update all numeric codes!!!
+
 ## SHA256 signature implementation
 
 This is a .NET Standard library based on RedsysTPV by mbuenoferrer for help you on cart and orders integrations with the Redsys payment gateway (a platform that manage online payments for several spanish banks like La Caixa, Banco Santander, BBVA, Banco Sabadell, Bankia, etc). Now it can be used on .NET Core or any other that implements netstandard 2.0.
