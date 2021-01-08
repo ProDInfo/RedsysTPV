@@ -13,7 +13,7 @@ namespace RedsysTPV.Tests
             PaymentRequest paymentRequest = new PaymentRequest(
                 "999008881",
                 "871",
-                Enums.TransactionType.Authorisation,
+                Enums.TransactionType.Authorization,
                 1.45M,
                 Currency.EUR,
                 "19990000000A",

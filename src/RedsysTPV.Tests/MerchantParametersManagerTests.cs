@@ -12,7 +12,7 @@ namespace RedsysTPV.Tests
             PaymentRequest paymentRequest = new PaymentRequest(               
                 "999008881",
                 "871",
-                Enums.TransactionType.Authorisation,
+                Enums.TransactionType.Authorization,
                 1.45M,
                 Currency.EUR,
                 "19990000000A",
@@ -33,7 +33,7 @@ namespace RedsysTPV.Tests
             PaymentRequest paymentRequest = new PaymentRequest(
                 "999008881",
                 "871",
-                Enums.TransactionType.Authorisation,
+                Enums.TransactionType.Authorization,
                 1.45M,
                 Currency.EUR,
                 "999911111111",
@@ -70,7 +70,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(paymentResponse.Ds_Response == "0");
             Assert.IsTrue(paymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(paymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(paymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
+            Assert.IsTrue(paymentResponse.Ds_TransactionType == Enums.TransactionType.Authorization);
         }
     }
 }

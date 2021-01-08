@@ -25,7 +25,7 @@ namespace RedsysTPV.WebSample.Controllers
                 Ds_Merchant_ConsumerLanguage: Language.Spanish,
                 Ds_Merchant_MerchantCode: merchantCode,
                 Ds_Merchant_Terminal: "1",
-                Ds_Merchant_TransactionType: TransactionType.Authorisation,
+                Ds_Merchant_TransactionType: TransactionType.Authorization,
                 Ds_Merchant_Amount: amount,
                 Ds_Merchant_Currency: Currency.EUR,
                 Ds_Merchant_Order: merchantOrder,

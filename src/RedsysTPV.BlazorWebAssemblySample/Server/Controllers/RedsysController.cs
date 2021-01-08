@@ -26,7 +26,7 @@ namespace RedsysTPV.BlazorWebAssemblySample.Server.Controllers
                 Ds_Merchant_ConsumerLanguage: Language.Spanish,
                 Ds_Merchant_MerchantCode: "335088258",
                 Ds_Merchant_Terminal: "1",
-                Ds_Merchant_TransactionType:  TransactionType.Authorisation,
+                Ds_Merchant_TransactionType:  TransactionType.Authorization,
                 Ds_Merchant_Amount: 123,
                 Ds_Merchant_Currency: Currency.EUR,
                 Ds_Merchant_Order: orderNumber,

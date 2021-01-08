@@ -21,7 +21,7 @@ namespace RedsysTPV.Tests
                 Ds_Response = paid ? "0000" : "101",
                 Ds_SecurePayment = "",
                 Ds_Terminal = "1",
-                Ds_TransactionType = Enums.TransactionType.Authorisation
+                Ds_TransactionType = Enums.TransactionType.Authorization
             };
         }
     }

@@ -8,10 +8,10 @@ namespace RedsysTPV.Enums
     public enum TransactionType
     {
         [Description("0")]
-        Authorisation,
+        Authorization,
 
         [Description("1")]
-        Preauthorisation,
+        Preauthorization,
 
         [Description("2")]
         Confirmation,
@@ -44,23 +44,6 @@ namespace RedsysTPV.Enums
         DevolucionSinOriginal,
 
         [Description("37")]
-        PremioDeApuestas,
-
-        //[Description("A")]
-        //TraditionalPayment,
-        //[Description("O")]
-        //DeferredAuthorisation,
-
-        //[Description("P")]
-        //DeferredAuthorisationConfirmation, 
-
-        //[Description("Q")]
-        //DeferredAuthorisationCancellation,
-
-        //[Description("R")]
-        //InitialDeferredRecurringTransaction,
-
-        //[Description("S")]
-        //DeferredNextRecurringAuthorisation,
+        PremioDeApuestas
     }
 }

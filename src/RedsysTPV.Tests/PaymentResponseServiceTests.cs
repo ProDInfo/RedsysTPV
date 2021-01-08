@@ -34,7 +34,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.PaymentResponse.Ds_Response == "0");
             Assert.IsTrue(result.PaymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(result.PaymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
+            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorization);
         }
 
         [TestMethod]
@@ -78,7 +78,7 @@ namespace RedsysTPV.Tests
             Assert.IsTrue(result.PaymentResponse.Ds_Response == "101");
             Assert.IsTrue(result.PaymentResponse.Ds_SecurePayment == "1");
             Assert.IsTrue(result.PaymentResponse.Ds_Terminal == "2");
-            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorisation);
+            Assert.IsTrue(result.PaymentResponse.Ds_TransactionType == Enums.TransactionType.Authorization);
         }
     }
 }
