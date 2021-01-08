@@ -1,29 +1,27 @@
 ﻿@model ResponseViewModel
-@*@{
-    Layout = null;
-}*@
+
 <div class="row">
     <div class="col-md-12">
         <h1>Respuesta comercio:</h1>
         <div class="form-group">
             <label for="Amount">Fecha:</label>
-            @Html.TextBox(nameof(Model.Date), Model.Date, new { @Class = "form-control" })
+            <input asp-for="Date" class="form-control" />
         </div>
         <div class="form-group">
             <label for="Amount">Importe</label>
-            @Html.TextBox(nameof(Model.Amount), Model.Amount, new { @Class = "form-control" })
+            <input asp-for="Amount" class="form-control" />
         </div>
         <div class="form-group">
             <label for="MerchantCode">Authorisation Code</label>
-            @Html.TextBox(nameof(Model.AuthorisationCode), Model.AuthorisationCode, new { @Class = "form-control" })
+            <input asp-for="AuthorisationCode" class="form-control" />
         </div>
         <div class="form-group">
             <label for="MerchantOrder">Tarjeta crédito</label>
-            @Html.TextBox(nameof(Model.CardNumber), Model.CardNumber, new { @Class = "form-control" })
+            <input asp-for="CardNumber" class="form-control" />
         </div>
         <div class="form-group">
             <label for="Amount">Fecha Caducidad</label>
-            @Html.TextBox(nameof(Model.ExpiryDate), Model.ExpiryDate, new { @Class = "form-control" })
+            <input asp-for="ExpiryDate" class="form-control" />
         </div>
     </div>
 </div>
