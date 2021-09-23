@@ -18,18 +18,18 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Opcional. Representa el código de autorización necesario para identificar de manera inequivoca la transacción original sobre la que se desea realizar la devolución.
         /// </summary>
-        public string Ds_Merchant_AuthorisationCode { get; }
+        public string Ds_Merchant_AuthorisationCode { get; set; }
         /// <summary>
         /// Obligatorio para operativa COF Visa y MC. Valores posibles:
         /// "S": Sí es primera transacción COF(almacenar credenciales).
         /// "N": No es primera transacción COF.
         /// Cualquier otro valor no se tendrá en cuenta y la operación no se procesará como COF.
         /// </summary>
-        public string Ds_Merchant_Cof_Ini { get; }
+        public string Ds_Merchant_Cof_Ini { get; set; }
         /// <summary>
         /// Opcional. Este identificador es devuelto en la respuesta de la primera operación COF (almacenamiento de credenciales), y deberá enviarse en transacciones sucesivas realizadas con las credenciales que generaron este mismo Id_txn.
         /// </summary>
-        public string Ds_Merchant_Cof_Txnid { get; }
+        public string Ds_Merchant_Cof_Txnid { get; set; }
         /// <summary>
         /// Opcional para COF Visa y MC. Valores posibles:
         /// "I": Installments.
@@ -41,7 +41,7 @@ namespace RedsysTPV.Models
         /// "N": No Show.
         /// "C": Otras.
         /// </summary>
-        public string Ds_Merchant_Cof_Type { get; }
+        public string Ds_Merchant_Cof_Type { get; set; }
         /// <summary>
         /// Los valores posibles se incluyen en la tabla de idiomas
         /// </summary>
@@ -56,7 +56,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Conditional. Código CVV2 de la tarjeta.
         /// </summary>
-        public string Ds_Merchant_Cvv2 { get; }
+        public string Ds_Merchant_Cvv2 { get; set; }
 
         /// <summary>
         /// Valores posibles:
@@ -64,13 +64,13 @@ namespace RedsysTPV.Models
         // "moto": identifica la operación como pago MOTO.
         /// </summary>
         public string Ds_Merchant_DirectPayment { get; set; }
-        public object Ds_Merchant_Emv3ds { get; }
-        public string Ds_Merchant_ExpiryDate { get; }
+        public object Ds_Merchant_Emv3ds { get; set; }
+        public string Ds_Merchant_ExpiryDate { get; set; }
 
         /// <summary>
         /// Identificador del código de grupo asociado a la referencia
         /// </summary>
-        public string Ds_Merchant_Group { get; }
+        public string Ds_Merchant_Group { get; set; }
         /// <summary>
         ///	Este parámetro indica la referencia de la tarjeta a utilizar, o la solicitud de generar una referencia.
         /// Para generar una nueva referencia enviar "REQUIRED" en el caso de REST/SOAP el parámetro DS_MERCHANT_PAN es Obligatorio.
@@ -79,7 +79,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Identificador de la operación de INSITE.
         /// </summary>
-        public string Ds_Merchant_IdOper { get; }
+        public string Ds_Merchant_IdOper { get; set; }
         /// <summary>
         /// Código FUC asignado al comercio.(Nº de comercio)
         /// </summary>
@@ -108,7 +108,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Tarjeta. Su longitud depende del tipo de tarjeta.
         /// </summary>
-        public string Ds_Merchant_Pan { get; }
+        public string Ds_Merchant_Pan { get; set; }
         /// <summary>
         /// Forma de pago aplicable. Ver tabla DS_MERCHANT_PAYMETHODS
         /// </summary>
@@ -122,7 +122,7 @@ namespace RedsysTPV.Models
         /// <summary>
         /// Operativa especial de pago de tributos. Código de barras del tributo en operativa especial de pago de tributos. Se requiere activación por parte de la entidad.
         /// </summary>
-        public string Ds_Merchant_Tax_Reference { get; }
+        public string Ds_Merchant_Tax_Reference { get; set; }
         /// <summary>
         /// Número de terminal que le asignará su banco.
         /// </summary>
@@ -146,45 +146,45 @@ namespace RedsysTPV.Models
         public string Ds_Merchant_UrlKO { get; set; }
 
 
-        public string Ds_XPayData { get; }
-        public string Ds_XPayOrigen { get; }
-        public string Ds_XPayType { get; }
+        public string Ds_XPayData { get; set; }
+        public string Ds_XPayOrigen { get; set; }
+        public string Ds_XPayType { get; set; }
 
         /// <summary>
         /// Indica si entre los campos de respuesta al comercio se incluye información relativa a la dirección de envío que tiene el titular configurada en su cuenta PayPal. Los valores que se pueden indicar en dicho campo son:
         /// S: si se desea obtener dicha información en la respuesta del TPV-Virtual.
         /// N: se NO se desea obtener dicha información en la respuesta del TPV-Virtual.
         /// </summary>
-        public string Ds_Merchant_ShippingAddressPyp { get; }
+        public string Ds_Merchant_ShippingAddressPyp { get; set; }
         /// <summary>
         /// Número de personalización que se desea utilizar en la operación. Si no se informa dicho parámetro o el valor que se informa no corresponde con un número de personalización activa existente
         /// </summary>
-        public string Ds_Merchant_PersoCode { get; }
+        public string Ds_Merchant_PersoCode { get; set; }
         /// <summary>
         /// No debe repetirse. Valor que enviará en la respuesta para identificar a la petición
         /// </summary>
-        public string Ds_Merchant_MatchingData { get; }
+        public string Ds_Merchant_MatchingData { get; set; }
         /// <summary>
         /// Es el valor de la interfaz PUC, por dónde el comercio procesará la transacción de autorización.
         /// </summary>
-        public string Ds_Acquirer_Identifier { get; }
+        public string Ds_Acquirer_Identifier { get; set; }
 
-        public string Ds_Merchant_MpiExternal { get; }
+        public string Ds_Merchant_MpiExternal { get; set; }
         /// <summary>
         /// Para informar el número de teléfono del titular para enviar el SMS con el enlace.
         /// </summary>
-        public string Ds_Merchant_Customer_Mobile { get; }
+        public string Ds_Merchant_Customer_Mobile { get; set; }
         /// <summary>
         /// Para informar la dirección de mail del titular para enviar el enlace.
         /// </summary>
-        public string Ds_Merchant_Customer_Mail { get; } 
+        public string Ds_Merchant_Customer_Mail { get; set; } 
 
-        public string Ds_Merchant_P2f_ExpiryDate { get; }
-        public string Ds_Merchant_Customer_Sms_Text { get; }
-        public string Ds_Merchant_P2f_XmlData { get; }
-        public string Ds_Merchant_Dcc { get; }
-        public string Ds_Merchant_Excep_Sca { get; }
-        public string Ds_Merchant_Ota { get; }
+        public string Ds_Merchant_P2f_ExpiryDate { get; set; }
+        public string Ds_Merchant_Customer_Sms_Text { get; set; }
+        public string Ds_Merchant_P2f_XmlData { get; set; }
+        public string Ds_Merchant_Dcc { get; set; }
+        public string Ds_Merchant_Excep_Sca { get; set; }
+        public string Ds_Merchant_Ota { get; set; }
 
 
         public PaymentRequest(
