@@ -1,6 +1,6 @@
 ﻿# RedsysTPV 
  
-### *Note: It fully supprts Blazor webassembly and a sample application is provided in the repository.*
+### *Note: It fully supports Blazor webassembly and a sample application is provided in the repository.*
 
 ### ¡¡¡This project has been refactored by ProDInfo. Thanks for your support and your great research to update all numeric codes!!!
 
